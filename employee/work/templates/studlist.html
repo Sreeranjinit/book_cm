@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="3px">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>course</th>
+        <th>gender</th>
+        <th>place</th>
+        <th>view</th>
+    </tr>
+        {%for stud in form%}
+   <tr>
+        <td>{{stud.name}}</td>
+        <td>{{stud.age}}</td>
+        <td>{{stud.course}}</td>
+        <td>{{stud.gender}}</td>
+        <td>{{stud.place}}</td>
+        <td>
+        <a href="{% url 'stud' stud.id %}">link</a> <!---ingane koduthale table le link click cheyyumbol stud enn linkname ulla pageilekk navigate cheyyullu--->
+        <a href="{% url 'stud-del' stud.id %}">delete</a>
+       </td>
+    </tr>
+    {%endfor%}
+    </table>
+</body>
+</html>

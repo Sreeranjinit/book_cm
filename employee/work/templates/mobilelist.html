@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center;">Mobile Details</h1>
+    <table border="3" style="background-color: pink; text-align: center; margin-left: 420px;">
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>details</th>
+        </tr>
+    {%for mobileModel in s%}
+        <tr>
+            <td>{{mobileModel.name}}</td>
+            <td>{{mobileModel.price}}</td>
+            <td>{{mobileModel.details}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
